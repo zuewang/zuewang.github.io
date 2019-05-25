@@ -1,3 +1,16 @@
+---
+title: "Ubuntu"
+layout: post
+date: 2019-05-12 12:34
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- Ubuntu
+category: blog
+author: zuewang
+description: Ubuntu notes
+---
+
 # Install OpenCV 3.3 on Ubuntu 16.04 LTS with CUDA 9.0
 
 Instructions: https://github.com/BVLC/caffe/wiki/OpenCV-3.3-Installation-Guide-on-Ubuntu-16.04.
