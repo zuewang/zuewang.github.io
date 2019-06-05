@@ -58,7 +58,7 @@ double view_scale_ratio = (mouse_pos.x() - 0) / (mouse_pos_view.x() - origin_vie
 double scale = magnify_factor * view_scale_ratio;
 QTransfrom transform(scale,     0.0,    0.0,
                      0.0,       scale,  0.0,
-                     tx, ty, 1.0);
+                     tx,        ty,     1.0);
 brush.setTransform(transform);
 magnifier.setBrush(brush);
 // if already added to scene, do removeItem and then addItem
