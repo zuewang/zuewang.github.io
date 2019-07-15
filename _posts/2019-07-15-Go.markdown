@@ -1,0 +1,16 @@
+---
+title: "Go"
+layout: post
+date: 2019-07-15 12:34
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- Golang
+category: blog
+author: zuewang
+description: 
+---
+
+# Remove packages installed with `go get`
+
+find and remove the package under `$GOPATH/pkg/<system architecture>`
