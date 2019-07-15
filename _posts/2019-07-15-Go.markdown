@@ -11,6 +11,6 @@ author: zuewang
 description: 
 ---
 
-# Remove packages installed with `go get`
+# Remove packages installed with go get
 
 find and remove the package under `$GOPATH/pkg/<system architecture>`

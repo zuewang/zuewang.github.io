@@ -17,3 +17,43 @@ in user1(root user) shell: cat ~/.Xauthority | sudo -u user2 -i tee .Xauthority 
 # Save terminal output to file and also display output in console
 tee
 https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+
+# Systemd services
+
+ * start jupyter on boot
+ user: <User>
+ group: <Group>
+ conda environment name: <Env>
+
+{% highlight shell %}
+[Unit]
+Description=Start jupyter notebook
+
+[Service]
+Type=simple
+ExecStart=/home/<User>/anaconda3/envs/<Env>/bin/jupyter notebook --no-browser --port 9999 --ip=0.0.0.0 --allow-root --NotebookApp.token= --notebook-dir='/home/<User>'
+User=<User>
+Group=<Group>
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+{% endhighlight %}
+
+ * mount disk on boot
+ disk partition uuid: <UUID>
+
+{% highlight shell %}
+Description=Mount data0
+
+[Service]
+Type=oneshot
+ExecStart=/bin/mount --uuid <UUID> /data0
+ExecStop=/bin/umount /data0
+RemainAfterExit=True
+User=root
+
+[Install]
+WantedBy=multi-user.target
+{% endhighlight %}
