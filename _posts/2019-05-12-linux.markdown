@@ -20,7 +20,8 @@ https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
 
 # Systemd services
 
- * start jupyter on boot      
+ * `start-jupyter.service`    
+ start jupyter on boot      
  user name: User      
  group name: Group     
  conda environment name: Env      
@@ -41,7 +42,8 @@ RestartSec=10
 WantedBy=multi-user.target
 {% endhighlight %}
 
- * mount disk on boot    
+ * `mount-data0.service`    
+ mount disk on boot    
  disk partition uuid: UUID     
 
 {% highlight shell %}
