@@ -1,0 +1,23 @@
+---
+title: "Network"
+layout: post
+date: 2019-07-15 12:34
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- network
+- CentOS
+- webmin
+category: blog
+author: zuewang
+description: 
+---
+
+# Reset network in CentOS
+
+reference: https://www.centos.org/forums/viewtopic.php?t=67085
+
+1. backup `/etc/sysconfig/network-scripts/ifcfg-*`
+2. remove all `ifcfg-*` except `ifcfg-lo`
+3. restart NetworkManager
+4. reboot (if necessary)
