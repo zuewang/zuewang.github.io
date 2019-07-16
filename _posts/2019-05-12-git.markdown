@@ -14,14 +14,29 @@ description: git notes
 # update repo
 
 ### show remote url
+{% highlight shell %}
 git remote -v
+{% endhighlight %}
 
 ### modify remote url
+{% highlight shell %}
 git remote set-url <name: e.g. upstream> <url>
+{% endhighlight %}
 
 ### fetch upstream
+{% highlight shell %}
 git remote add upstream <git url>
 git fetch upstream fetch all branches
 git checkout master
 git rebase upstream/master
 git push -f origin master
+{% endhighlight %}
+
+### revert uncommitted changes including files and folders
+{% highlight shell %}
+# Revert changes to modified files.
+git reset --hard
+
+# Remove all untracked files and directories. (`-f` is `force`, `-d` is `remove directories`)
+git clean -fd
+{% endhighlight %}
