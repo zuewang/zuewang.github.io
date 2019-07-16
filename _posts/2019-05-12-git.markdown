@@ -32,7 +32,8 @@ git rebase upstream/master
 git push -f origin master
 {% endhighlight %}
 
-### revert uncommitted changes including files and folders
+# revert uncommitted changes including files and folders  
+
 {% highlight shell %}
 # Revert changes to modified files.
 git reset --hard
