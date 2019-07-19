@@ -19,3 +19,6 @@ https://stackoverflow.com/questions/46584000/cmake-error-variables-are-set-to-no
 https://stackoverflow.com/questions/46884682/error-in-building-opencv-with-ffmpeg
 Install ffmpeg:
 tar xvf ffmpeg-3.1.11.tar.bz2 cd ffmpeg-3.1.11 sudo apt-get install yasm ./configure --host-cppflags=-fPIC --host-cflags=-fPIC --enable-shared make sudo make install --------------------- 作者：二十马赫 来源：CSDN 原文：https://blog.csdn.net/qq_24878901/article/details/82382895 版权声明：本文为博主原创文章，转载请附上博文链接！
+
+# Show apt package version
+ `sudo apt show <package_name>`
