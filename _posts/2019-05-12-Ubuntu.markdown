@@ -22,3 +22,9 @@ tar xvf ffmpeg-3.1.11.tar.bz2 cd ffmpeg-3.1.11 sudo apt-get install yasm ./confi
 
 # Show apt package version
  `sudo apt show <package_name>`
+
+# Ubuntu 16.04 LTS randomly log out by itself
+  reference: https://askubuntu.com/questions/772777/ubuntu-16-04-lts-will-automatically-log-out
+  1. Ctrl+Alt+F6
+  2. `sudo rm -v .Xauthority` (in home directory)
+  3. `sudo service lightdm restart` (restrat lightdm to let system recreate `.Xauthority` file)
