@@ -32,6 +32,13 @@ git rebase upstream/master
 git push -f origin master
 {% endhighlight %}
 
+{% highlight shell %}
+git checkout master
+git remote add upstreamname/repo https://myname@bitbucket.org/upstreamname/repo.git
+git fetch upstreamname/repo
+git merge remotes/upstreamname/repo/master
+{% endhighlight %}
+
 # revert uncommitted changes including files and folders  
 
 {% highlight shell %}
