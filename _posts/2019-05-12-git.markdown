@@ -51,4 +51,13 @@ git checkout HEAD -- my-file.txt
 
 # Remove all untracked files and directories. (`-f` is `force`, `-d` is `remove directories`)
 git clean -fd
+
+# force local repo to be exactly the same with upstream  
+
+{% highlight shell %}
+# this makes repo exactly the same as upstream: your commits will be eaten!   
+git fetch upstream
+git reset --hard upstream/master
+git push origin master --force
+
 {% endhighlight %}
